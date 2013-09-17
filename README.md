@@ -18,6 +18,7 @@ add this to your vimrc
 ###process:
 
 svndiff use vimdiff: see [link](http://www.ccvita.com/445.html "svndiff use vimdiff")
+
 gitdiff use vimdiff: see [link](http://cxh.me/2013/09/14/show-gitdiff-using-vimdiff/ "svn diff use vimdiff")
 
 first use svn diff/git diff and open vimdiff to see the difference
