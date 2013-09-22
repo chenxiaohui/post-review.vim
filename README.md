@@ -61,19 +61,19 @@ post-review.vim
 
 比如说Jack正欢快的写着代码呢
 
-    为什么是Jack???
+    ![](ask.jpg "")为什么是Jack???
 
 不要care这种细节, 然后Jack要提交, 猛然发现好多修改啊
     
-    难道不应该写一部分就post-review的嘛
+    ![](ask.jpg "")难道不应该写一部分就post-review的嘛
 
 说了不要care这种细节, 好了, 然后Jack需要一个一个查看修改的文件, 确定是放到哪个Post-review中提交
 
-    What a fucking job!!!
+    ![](ask.jpg "") What a fucking job!!!
 
 这时候你需要的就是这一款全自动, 人性化, 帮你生成post-review命令的插件, 只要998, 打进电话你就能拥有它...
     
-    跑题了...
+    ![](ask.jpg "") 跑题了...
 
 好了, 我们先svn diff或者git diff一下, 为了保证你看到的是如下界面请参考[这里](http://www.ccvita.com/445.html "svndiff use vimdiff")或者[这里](http://cxh.me/2013/09/14/show-gitdiff-using-vimdiff/ "svn diff use vimdiff").
 
@@ -83,11 +83,11 @@ post-review.vim
 
 最后, 两个配置项:
 
-  let g:base_dir_mark = 'cscope.out'
+    let g:base_dir_mark = 'cscope.out'
 
 制定了一个根目录标志, 也就是说你需要在你的项目根目录找一个(或者建一个)独一无二的文件(比如.git, cscope.out, tags)之类, 让插件去寻找这个文件, 找到之后就标识这个目录为根目录. 跟ctrlp学的.
 
-  let g:chmod_after_create = 0
+    let g:chmod_after_create = 0
 
 无聊的选项, 建立完post-review之后是不是chmod +x, 无视它.
 
