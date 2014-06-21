@@ -19,11 +19,9 @@ add this to your vimrc
 
 svndiff use vimdiff: see [link](http://www.ccvita.com/445.html "svndiff use vimdiff")
 
-![](http://www.ccvita.com/usr/uploads/2011/svn_diff.png "svndiff")
-
 gitdiff use vimdiff: see [link](http://cxh.me/2013/09/14/show-gitdiff-using-vimdiff/ "svn diff use vimdiff")
 
-![](http://cxh.me/images/2013-9/git-vimdiff.png "gitdiff")
+![](http://cxh.me/images/2013/git-vimdiff.png "gitdiff")
 
 first use svn diff/git diff and open vimdiff to see the difference
 
@@ -35,12 +33,13 @@ after you added all files you need to review, chmod +x post-review.sh and execut
 
 (if you set g:chmod_after_create to 1 you will not need to chmod +x)
 
-
 ----------------------------------------
+
 请无视楼主以上装逼的英文:
 
 post-review.vim
 ===============
+
 就是一个用来从vimdiff记录需要Post-review的文件的插件
 
 不知道Post-review的同学请google之, 用百度搜索的同学自觉面壁去
@@ -102,3 +101,12 @@ post-review.vim
 发起新的post-review的时候建议把post-review.sh清空或者删除, 重复添加同一个文件的时候会判断.
 
 好了, 也就想到这么多了, 有其他的再补充, 钦此.
+
+-------------------------
+
+注：其实最后我发现还是这样更容易：
+
+    alias st='svn st'
+    alias sta='st|grep ^A '
+    alias stm='st|grep ^M '
+    alias po="echo 'post-review -d' >post-review.sh  && sta >> post-review.sh ; stm >> post-review.sh ; chmod +x post-review.sh ;sed -i 's/^[MA]\s\+//g' post-review.sh;sed -i 's/$/ \\\\/g' post-review.sh;vi post-review.sh"
